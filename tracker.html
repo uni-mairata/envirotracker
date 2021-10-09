@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tracking Page || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="tracker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+
+    <!--START nagivation-->
+   <div class="topnav">
+      <!--Logo-->
+      <img
+        class="logo"
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+      />
+      <a href="index.html"
+        >Home <i style="font-size:17px" class="fas">&#xf015;</i>
+      </a>
+      <a href="aboutus.html"
+        >About Us <i class="fas fa-comment" style="font-size:17px"></i
+      ></a>
+      <a href="compare.html"
+        >Compare <i class="fas fa-comments" style="font-size:17px"></i
+      ></a>
+      <a href="contact.html"
+        >Contact <i style="font-size:17px" class="fas">&#xf095;</i></a
+      >
+      <div class="dropdown topnav">
+        <a href="#dropbtn"
+          >Learn the Impacts
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="water.html"><center>Water Use</center></a>
+          <a href="electricity.html"><center>Electricity</center></a>
+          <a href="food.html"><center>Food</center></a>
+        </div>
+      </div>
+    </div>
+    <!--END navigation-->
+
+    <br /><br /><br />
+    <center>
+      <h1>
+        Activity and Use Tracker
+      </h1>
+    </center>
+
+    <center>
+      <div class="btn-group">
+        <button class="button" onclick="location.href= 'track-shop.html'">
+          Shop
+        </button>
+        <button class="button" onclick="location.href = 'track-eat.html'">
+          Eat & Drink
+        </button>
+        <button class="button" onclick="location.href = 'track-use.html'">
+          Use
+        </button>
+        <button class="button" onclick="location.href = 'track-travel.html'">
+          Travel
+        </button>
+        <br />
+        <br />
+        <br />
+      </div>
+    </center>
+
+    <br /><br />
+    <center>
+      <img
+        src="https://media.giphy.com/media/RIlDxJzYe1vGP6MVKd/giphy.gif"
+        height="200px"
+      />
+    </center>
+  </body>
+</html>

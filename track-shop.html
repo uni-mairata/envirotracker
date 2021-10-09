@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="./track.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+
+    <div class="toptitle">
+      <h1>
+        Shop
+      </h1>
+    </div>
+    <center>
+      <p>
+        <!--Logo-->
+        <img
+          class="logo"
+          src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+        /><br />
+        Check off all that you've bought one of!
+      </p>
+    </center>
+    <div class="centerlist">
+      <p>
+        <input type="checkbox" id="clothes" name="clothes" />
+        <label for="clothes">Clothes</label>
+      </p>
+      <p>
+        <input type="checkbox" id="shoes" name="shoes" />
+        <label for="shoes">Shoes</label>
+      </p>
+      <p>
+        <input type="checkbox" id="book" name="book" />
+        <label for="book">Books</label>
+      </p>
+      <p>
+        <input type="checkbox" id="water" name="water" />
+        <label for="water">Packaged water</label>
+      </p>
+      <p>
+        <input type="checkbox" id="electronics" name="electronics" />
+        <label for="electronics">Electronics</label>
+      </p>
+      <p>
+        <input type="checkbox" id="furniture" name="furniture" />
+        <label for="furniture">Furniture</label>
+      </p>
+      <p>
+        <input type="checkbox" id="beauty_products" name="beauty_products" />
+        <label for="beauty_products">Beauty products</label>
+      </p>
+    </div>
+
+    <button class="myButton center" onclick="shop_track();">Enter</button>
+    <button class="myButton center" onclick="location.href='tracker.html'">
+      Back
+    </button>
+
+    <div id="after_submit">
+      <p id="message"></p>
+      <p id="message2"></p>
+      <p id="message3"></p>
+      <p id="message4"></p>
+    </div>
+  </body>
+  <body>
+    <script>
+      function shop_track() {
+        var trees = 0;
+        var plastic = 0;
+        var waters = 0;
+        var bill = "You shopped:";
+        var chemicals = 0;
+
+        var clothes = document.getElementById("clothes");
+        if (clothes.checked == true) {
+          waters += 2700;
+        }
+        var shoes = document.getElementById("shoes");
+        if (shoes.checked == true) {
+          waters += 2257;
+        }
+        var book = document.getElementById("book");
+        if (book.checked == true) {
+          trees += 3;
+        }
+        var water = document.getElementById("water");
+        if (water.checked == true) {
+          plastic += 10.4;
+        }
+        var electronics = document.getElementById("electronics");
+        if (electronics.checked == true) {
+          plastic += 85;
+        }
+        var furniture = document.getElementById("furniture");
+        if (furniture.checked == true) {
+          trees += 10.4;
+        }
+        var Beauty_products = document.getElementById("beauty_products");
+        if (Beauty_products.checked == true) {
+          chemicals += 168;
+        }
+
+        document.getElementById("after_submit").style.visibility = "visible";
+        document.getElementById("message").innerHTML =
+          "Your bill shows " + waters + " liters.";
+        document.getElementById("message").style.textAlign = "center";
+        document.getElementById("message").style.fontSize = "larger";
+        document.getElementById("message").style.border = "none";
+        document.getElementById("message").style.backgroundColor = "#FFD7D6";
+        document.getElementById("message").style.padding = "25px";
+
+        document.getElementById("message2").innerHTML =
+          "Your bill shows " + plastic + " percent of the product is plastic";
+        document.getElementById("message2").style.textAlign = "center";
+        document.getElementById("message2").style.fontSize = "larger";
+        document.getElementById("message2").style.border = "none";
+        document.getElementById("message2").style.backgroundColor = "#FFD7D6";
+        document.getElementById("message2").style.padding = "25px";
+
+        document.getElementById("message3").innerHTML =
+          "Your bill shows " + trees + " percent of a tree";
+        document.getElementById("message3").style.textAlign = "center";
+        document.getElementById("message3").style.fontSize = "larger";
+        document.getElementById("message3").style.border = "none";
+        document.getElementById("message3").style.backgroundColor = "#FFD7D6";
+        document.getElementById("message3").style.padding = "25px"
+        
+      
+        document.getElementById("message4").innerHTML =
+          "Your bill shows " + chemicals + " chemicals";
+        document.getElementById("message4").style.textAlign = "center";
+        document.getElementById("message4").style.fontSize = "larger";
+        document.getElementById("message4").style.border = "none";
+        document.getElementById("message4").style.backgroundColor = "#FFD7D6";
+        document.getElementById("message4").style.padding = "25px";
+      
+      }
+    </script>
+  </body>
+</html>

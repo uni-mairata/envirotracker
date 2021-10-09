@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Eating & Drinking || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="track.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+    <div class="toptitle">
+      <h1>
+        Eat & Drink
+      </h1>
+    </div>
+    <center>
+      <p>
+        <!--Logo-->
+        <img
+          class="logo"
+          src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+        /><br />
+        Check off all that you've eaten one serving of!
+      </p>
+    </center>
+    <div class="centerlist">
+      <p>
+        <input type="checkbox" id="Avocados" name="Avocados" />
+        <label for="Avocados">Avocados</label>
+      </p>
+
+      <p></p>
+
+      <p>
+        <input type="checkbox" id="Apples" name="Apples" />
+        <label for="Apples">Apples</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Bananas" name="Bananas" />
+        <label for="Bananas">Bananas</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Beef" name="Beef" />
+        <label for="Beef">Beef</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Beans" name="Beans" />
+        <label for="Beans">Beans</label>
+      </p>
+
+      <p></p>
+      <p>
+        <input type="checkbox" id="Bread" name="Bread" />
+        <label for="Bread">Bread</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Berries" name="Berries" />
+        <label for="Berries">Berries</label>
+      </p>
+      <p>
+        <input type="checkbox" id="Beer" name="Beer" />
+        <label for="Beer">Beer</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Cheese" name="Cheese" />
+        <label for="Cheese">Cheese</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Dark Chocolate" name="Dark Chocolate" />
+        <label for="Dark Chocolate">Dark Chocolate</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Milk Chocolate" name="Milk Chocolate" />
+        <label for="Milk Chocolate">Milk Chocolate</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Citrus_Fruit" name="Citrus_Fruit" />
+        <label for="Citrus_Fruit">Citrus Fruit</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Coffee" name="Coffee" />
+        <label for="Coffee">Coffee</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Eggs" name="Eggs" />
+        <label for="Eggs">Eggs</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Fish" name="Fish" />
+        <label for="Fish">Fish</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Lamb" name="Lamb" />
+        <label for="Lamb">Lamb</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Milk" name="Milk" />
+        <label for="Milk">Milk</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Nuts" name="Nuts" />
+        <label for="Nuts">Nuts</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Oatmeal" name="Oatmeal" />
+        <label for="Oatmeal">Oatmeal</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Pasta" name="Pasta" />
+        <label for="Pasta">Pasta</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Peas" name="Peas" />
+        <label for="Peas">Peas</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Pork" name="Pork" />
+        <label for="Pork">Pork</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Potatoes" name="Potatoes" />
+        <label for="Potatoes">Potatoes</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Rice" name="Rice" />
+        <label for="Rice">Rice</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Tea" name="Tea" />
+        <label for="Tea">Tea</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Tofu" name="Tofu" />
+        <label for="Tofu">Tofu</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Tomatoes" name="Tomatoes" />
+        <label for="Tomatoes">Tomatoes</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="Chicken" name="Chicken" />
+        <label for="Chicken">Chicken</label>
+      </p>
+    </div>
+
+    <button class="myButton center" onclick="eat_track();">Enter</button>
+    <button class="myButton center" onclick="location.href='tracker.html'">
+      Back
+    </button>
+
+    <div id="after_submit">
+      <p id="message"></p>
+    </div>
+  </body>
+
+  <script>
+    function eat_track() {
+      var totals = 0;
+      var servings = "You ate ";
+
+      var Apples = document.getElementById("Apples");
+      if (Apples.checked == true) {
+        totals += 0.03;
+      }
+      var Avocados = document.getElementById("Avocados");
+      if (Avocados.checked == true) {
+        totals += 0.2;
+      }
+      var Bananas = document.getElementById("Bananas");
+      if (Bananas.checked == true) {
+        totals += 0.06;
+      }
+      var Beans = document.getElementById("Beans");
+      if (Beans.checked == true) {
+        totals += 0.15;
+      }
+      var Beef = document.getElementById("Beef");
+      if (Beef.checked == true) {
+        totals += 7.75;
+      }
+      var Beer = document.getElementById("Beer");
+      if (Beer.checked == true) {
+        totals += 0.775;
+      }
+      var Berries = document.getElementById("Berries");
+      if (Berries.checked == true) {
+        totals += 0.012;
+      }
+      var Bread = document.getElementById("Bread");
+      if (Bread.checked == true) {
+        totals += 0.06;
+      }
+      var Cheese = document.getElementById("Cheese");
+      if (Cheese.checked == true) {
+        totals += 1;
+      }
+      var Dark_Chocolate = document.getElementById("Dark Chocolate");
+      if (Dark_Chocolate.checked == true) {
+        totals += 1.47;
+      }
+      var Milk_Chocolate = document.getElementById("Milk Chocolate");
+      if (Milk_Chocolate.checked == true) {
+        totals += 1.03;
+      }
+      var Chicken = document.getElementById("Chicken");
+      if (Chicken.checked == true) {
+        totals += 1.25;
+      }
+      var Citrus_Fruit = document.getElementById("Citrus_Fruit");
+      if (Citrus_Fruit.checked == true) {
+        totals += 0.035;
+      }
+      var Coffee = document.getElementById("Coffee");
+      if (Coffee.checked == true) {
+        totals += 0.425;
+      }
+      var Eggs = document.getElementById("Eggs");
+      if (Eggs.checked == true) {
+        totals += 0.6;
+      }
+      var Fish = document.getElementById("Fish");
+      if (Fish.checked == true) {
+        totals += 1.8;
+      }
+      var Lamb = document.getElementById("Lamb");
+      if (Lamb.checked == true) {
+        totals += 4.3;
+      }
+      var Milk = document.getElementById("Milk");
+      if (Milk.checked == true) {
+        totals += 0.63;
+      }
+      var Nuts = document.getElementById("Nuts");
+      if (Nuts.checked == true) {
+        totals += 0;
+      }
+      var Oatmeal = document.getElementById("Oatmeal");
+      if (Oatmeal.checked == true) {
+        totals += 0.12;
+      }
+      var Pasta = document.getElementById("Pasta");
+      if (Pasta.checked == true) {
+        totals += 0.12;
+      }
+      var Peas = document.getElementById("Peas");
+      if (Peas.checked == true) {
+        totals += 0;
+      }
+      var Pork = document.getElementById("Pork");
+      if (Pork.checked == true) {
+        totals += 0.12;
+      }
+      var Potatoes = document.getElementById("Potatoes");
+      if (Potatoes.checked == true) {
+        totals += 0.045;
+      }
+      var Rice = document.getElementById("Rice");
+      if (Rice.checked == true) {
+        totals += 0.33;
+      }
+      var Tea = document.getElementById("Tea");
+      if (Tea.checked == true) {
+        totals += 0.03;
+      }
+      var Tofu = document.getElementById("Tofu");
+      if (Tofu.checked == true) {
+        totals += 0.15;
+      }
+      var Tomatoes = document.getElementById("Tomatoes");
+      if (Tomatoes.checked == true) {
+        totals += 0.165;
+      }
+
+      var cleanTotals = totals.toFixed(3);
+      
+      document.getElementById("after_submit").style.visibility = "visible";
+      document.getElementById("message").innerHTML =
+        "Your meal emits " + cleanTotals + " kilograms of greenhouse gases.";
+      document.getElementById("message").style.textAlign = "center";
+      document.getElementById("message").style.fontSize = "larger";
+      document.getElementById("message").style.border = "none";
+      document.getElementById("message").style.backgroundColor = "#FFD7D6";
+      document.getElementById("message").style.padding = "25px";
+    }
+  </script>
+</html>

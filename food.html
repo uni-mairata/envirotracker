@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Impact of Food || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="/index-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <!-- <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+
+    <!--START nagivation-->
+    <div class="topnav">
+      <!--Logo-->
+      <img
+        class="logo"
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+      />
+      <a href="index.html"
+        >Home <i style="font-size:17px" class="fas">&#xf015;</i>
+      </a>
+      <a href="aboutus.html"
+        >About Us <i class="fas fa-comment" style="font-size:17px"></i
+      ></a>
+      <a href="compare.html"
+        >Compare <i class="fas fa-comments" style="font-size:17px"></i
+      ></a>
+      <a href="contact.html"
+        >Contact <i style="font-size:17px" class="fas">&#xf095;</i></a
+      >
+      <div class="dropdown topnav">
+        <a href="#dropbtn"
+          >Learn the Impacts
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="water.html"><center>Water Use</center></a>
+          <a href="electricity.html"><center>Electricity</center></a>
+          <a href="food.html"><center>Food</center></a>
+        </div>
+      </div>
+    </div>
+    <!--END navigation-->
+
+    <h1>
+      <center>
+        The Impact of Food
+      </center>
+    </h1>
+    <p>
+      The way food is produced heavily correlates with the environmental impact
+      that it has. From growing crops to processing, transporting, selling,
+      storing and throwing away food – everything we eat has an impact on the
+      environment and the climate.
+    </p>
+
+    <p>
+      There are a few ways to reduce our environemental impact through our food
+      choices, such as:
+    </p>
+    <div class="listing">
+      <ul>
+        <li>
+          Buying less red meat (red meat is a MAJOR issue and has multiple
+          negative impacts, like increasing the emission of gasses that
+          contribute to climate change)
+        </li>
+        <br />
+        <li>Reduce the amount of food that is wasted</li>
+        <br />
+        <li>Choosing to buy more locally grown produce</li>
+        <br />
+        <li>
+          Eat fewer foods that use lots of water to produce, like tea, beef,
+          chocolate (cocoa tree), dairy products, rice, etc.
+        </li>
+      </ul>
+      <br />
+      <center>
+        <img
+          src="https://www.catalystreview.net/wp-content/uploads/2010/03/food-efficiency-enviro-impact-580.png"
+        /><img
+          src="https://www.unsere-neue-erde.net/wp-content/uploads/2017/07/5f00d2e547e806311b80b29e1753f83b.jpg"
+          height="600px"
+        />
+      </center>
+    </div>
+    <footer style="background-color:#071C47;">
+      <br />
+      <font color="white">
+        <center>
+          Share this on social media! Help everyone take steps towards being
+          environmentally friendly!
+        </center></font
+      >
+      <br />
+      <center>
+        <a href="https://www.facebook.com">
+          <img
+            border="0"
+            src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2FScreen%20Shot%202020-02-15%20at%2011.10.31%20PM.png?v=1581826247240"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://twitter.com/home">
+          <img
+            border="0"
+            src="https://www.transparentpng.com/thumb/twitter/twitter-bird-logo-pictures-0.png"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://www.instagram.com/">
+          <img
+            border="0"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/new-instagram-logo-png-transparent-light.png"
+            width="90"
+            height="90"
+        /></a>
+        <br />
+        <br />
+      </center>
+    </footer>
+  </body>
+</html>

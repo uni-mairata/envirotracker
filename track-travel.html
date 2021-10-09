@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Traveling || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="track.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="toptitle">
+      <h1>
+        Travel
+      </h1>
+    </div>
+    <center>
+      <!--Logo-->
+      <img
+        class="logo"
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+      /><br />
+    </center>
+    <form action="/action_page.php">
+      <div class="a">
+        <center><label for="fname">Type of Transport</label><br /></center>
+        <div class="centerlist">
+          <br />
+
+          <p>Select One</p>
+          <div>
+            <input type="radio" id="Bus" name="Transport" />
+            <label for="Bus">Bus</label>
+          </div>
+
+          <div>
+            <input type="radio" id="Bike" name="Transport" />
+            <label for="Bike">Bike</label>
+          </div>
+
+          <div>
+            <input type="radio" id="Car" name="Transport" />
+            <label for="Car">Car</label>
+          </div>
+
+          <br />
+          <label for="fname">Miles Driven </label><br />
+          <input type="number" id="fname" name="fname" value="0" /><br />
+          <br />
+          <p>
+            <label for="num">Number of People </label><br />
+            <input type="number" id="num" name="num" min="1" /><br /><br />
+          </p>
+        </div>
+      </div>
+    </form>
+    <p>
+      <button class="myButton center" onclick="travel_track();">Enter</button>
+      <button class="myButton center" onclick="location.href='tracker.html'">
+        Back
+      </button>
+      <br />
+    </p>
+    <div id="after_submit">
+      <p id="message"></p>
+
+      <!--START Loading Screen Javascript-->
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $("body").append(
+      '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+    );
+    $(window).on("load", function() {
+      setTimeout(removeLoader, 500); //wait for page load
+    });
+    function removeLoader() {
+      $("html,body").scrollTop(0);
+      $("#loadingDiv").fadeOut(500, function() {
+        // fadeOut complete. Remove the loading div
+        $("#loadingDiv").remove(); //makes page more lightweight
+      });
+    }
+  </script>
+  <script>
+    function travel_track() {
+      var Bike = document.getElementById("Bike");
+      var fuel = 0;
+      var message = "";
+      if (Bike.checked == true) {
+        fuel += 0;
+        message =
+          "Congrats! You are amazing; you helped improve the environment!";
+      }
+
+      var people = document.getElementById("num").value;
+      var mileage = document.getElementById("fname").value;
+
+      var Car = document.getElementById("Car");
+      if (Car.checked == true) {
+        fuel += 0.213 * mileage;
+      }
+      var Bus = document.getElementById("Bus");
+      if (Bus.checked == true) {
+        fuel += 0.14 * mileage;
+      }
+
+      var GHG = fuel / people;
+
+      document.getElementById("after_submit").style.visibility = "visible";
+      document.getElementById("message").innerHTML =
+        "Your trip emits " + GHG + " kilograms of greenhouse gases.";
+      document.getElementById("message").style.textAlign = "center";
+      document.getElementById("message").style.fontSize = "larger";
+      document.getElementById("message").style.border = "none";
+      document.getElementById("message").style.backgroundColor = "#FFD7D6";
+      document.getElementById("message").style.padding = "25px";
+    }
+  </script>
+</html>

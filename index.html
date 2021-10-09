@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Enviro-Tracker || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="/index-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <!-- <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+
+    <!--START nagivation-->
+    <div class="topnav">
+      <!--Logo-->
+      <img
+        class="logo"
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+      />
+      <a href="index.html"
+        >Home <i style="font-size:17px" class="fas">&#xf015;</i>
+      </a>
+      <a href="aboutus.html"
+        >About Us <i class="fas fa-comment" style="font-size:17px"></i
+      ></a>
+      <a href="compare.html"
+        >Compare <i class="fas fa-comments" style="font-size:17px"></i
+      ></a>
+      <a href="contact.html"
+        >Contact <i style="font-size:17px" class="fas">&#xf095;</i></a
+      >
+      <div class="dropdown topnav">
+        <a href="#dropbtn"
+          >Learn the Impacts
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="water.html"><center>Water Use</center></a>
+          <a href="electricity.html"><center>Electricity</center></a>
+          <a href="food.html"><center>Food</center></a>
+        </div>
+      </div>
+    </div>
+    <!--END navigation-->
+
+    <br />
+
+    <!--START Image Section-->
+    <div class="imgOverText">
+      <img
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Fsunnnnn.jpg?v=1582919313756"
+        style="height: 50%; width:100%;"
+      />
+      <div class="centered" style="height: 50%;">
+        <h1 class="topWords" style="font-size: 40px">
+          One Step At A Time, <br />
+          Saving Our Future
+        </h1>
+        <p class="topWords" style="font-size: 19px">
+          The planet is sick. The actions we all take together right now are
+          crucial to protecting the natural world we rely on— and for setting us
+          on the path to a more hopeful, sustainable future.
+        </p>
+        <p class="topWords" style="font-size: 19px">
+          <a href="tracker.html"
+            ><button type="button" class="gradient-button">
+              Calculate your footprint
+            </button></a
+          >
+        </p>
+      </div>
+    </div>
+    <!--END Image Section-->
+
+    <br /><br />
+    <h1>
+      <center>
+        Want to learn more about environemental impact and sustainability?
+      </center>
+    </h1>
+    <p>
+      <center>
+        Click on the buttons below to go to listen to different podcasts on
+        these topics!
+      </center>
+    </p>
+    <br />
+    <div class="btn-group">
+      <a href="https://soundcloud.com/climate-changer" target="_blank"
+        ><button class="button">
+          <span>The Climate Changers by Paul Gehres</span>
+        </button></a
+      >
+      <center>
+        <p style="padding:30px;">
+          <br /><br /><br /><br />
+          This podcast discusses several issues relating to climate change and
+          how this relates to different organizations. It provides advice to
+          people as to how they can live more sustainably.
+        </p>
+      </center>
+      <a href="https://www.edie.net/" target="_blank"
+        ><button class="button">
+          <span>Sustainable Business Covered by edie.net</span>
+        </button></a
+      >
+      <center>
+        <p style="padding:30px;">
+          <br /><br /><br /><br />
+          Professionals in the energy, resource efficiency, and sustainability
+          fields can use this to get information and advice about how to keep
+          their businesses profitable while environmentally sustainable.
+        </p>
+      </center>
+      <a href="https://sustainabilitydefined.com/" target="_blank"
+        ><button class="button">
+          <span>Sustainability Defined by GreenBiz</span>
+        </button></a
+      >
+      <center>
+        <p style="padding:30px;">
+          <br /><br /><br /><br />
+          Each episode of the podcast focuses on a single topic that pushes
+          sustainability forward. Professional, organized, helpful, no matter
+          what episode.
+        </p>
+      </center>
+      <a
+        href="https://www.greentechmedia.com/podcast/the-energy-gang#gs.LFd=9oI"
+        target="_blank"
+        ><button class="button">
+          <span>The Energy Gang by Green Tech Media </span>
+        </button></a
+      >
+      <center>
+        <p style="padding:30px;">
+          <br /><br /><br /><br />
+          Delivers market analysis, business-to-business news, and conferences
+          that inform and connect people in the global clean energy market.
+        </p>
+      </center>
+    </div>
+
+    <br /><br />
+    <footer style="background-color:#071C47;">
+      <br />
+      <font color="white">
+        <center>
+          Share this on social media! Help everyone take steps towards being
+          environmentally friendly!
+        </center></font
+      >
+      <br />
+      <center>
+        <a href="https://www.facebook.com">
+          <img
+            border="0"
+            src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2FScreen%20Shot%202020-02-15%20at%2011.10.31%20PM.png?v=1581826247240"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://twitter.com/home">
+          <img
+            border="0"
+            src="https://www.transparentpng.com/thumb/twitter/twitter-bird-logo-pictures-0.png"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://www.instagram.com/">
+          <img
+            border="0"
+            src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2FScreen%20Shot%202020-02-15%20at%2011.20.07%20PM.png?v=1581826820132"
+            width="90"
+            height="90"
+        /></a>
+        <br />
+        <br />
+      </center>
+    </footer>
+  </body>
+</html>

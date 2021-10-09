@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Water Usages || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="track.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+    <div class="toptitle">
+      <h1>
+        Water Usage
+      </h1>
+    </div>
+    <center>
+      <p>
+        <!--Logo-->
+        <img
+          class="logo"
+          src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+        />
+      </p>
+    </center>
+    <div class="centerlist">
+      <form action="/action_page.php">
+        <label for="toilet"
+          >How many times did you flush the toilet today?</label
+        ><br />
+
+        <input type="text" id="lname" name="lname" value="0" /><br /><br />
+
+        <label for="sink">How many times did you wash your hands today?</label
+        ><br />
+
+        <input type="text" id="sink" name="lname" value="0" /><br /><br />
+
+        <label for="sink">How many showers did you take today?</label><br />
+
+        <input type="text" id="shower" name="lname" value="0" /><br /><br />
+        <label for="sink"
+          >On average, how long were your showers? (minutes)</label
+        ><br />
+
+        <input type="text" id="teeth" name="lname" value="0" /><br /><br />
+        <label for="sink"
+          >How many times have you brushed your teeth today</label
+        ><br />
+
+        <input type="text" id="bath" name="lname" value="0" /><br /><br />
+        <label for="sink"
+          >How many times have you washed the dishes today?</label
+        >
+
+        <br />
+        <input type="text" id="dish" name="lname" value="0" /><br /><br />
+      </form>
+    </div>
+
+    <button class="myButton center" onclick="multiplyBy();">Enter</button>
+    <button class="myButton center" onclick="location.href='tracker.html'">
+      Back
+    </button>
+
+    <div id="after_submit">
+      <p id="message"></p>
+    </div>
+  </body>
+
+  <script>
+    function multiplyBy() {
+      var totals = 0;
+      var num1 = document.getElementById("lname").value;
+      totals += num1 * 3.6;
+
+      var num2 = document.getElementById("sink").value;
+      totals += num2 * 1.04;
+
+      var num3 = document.getElementById("shower").value;
+      totals += num3 * 2.1;
+
+      var num4 = document.getElementById("teeth").value;
+      totals += num4 * 5;
+
+      var num5 = document.getElementById("dish").value;
+      totals += num5 * 4;
+
+      var cleanTotals = totals.toFixed(3);
+
+      document.getElementById("after_submit").style.visibility = "visible";
+      document.getElementById("message").innerHTML =
+        "You used " + cleanTotals + " gallons of water.";
+      document.getElementById("message").style.textAlign = "center";
+      document.getElementById("message").style.fontSize = "larger";
+      document.getElementById("message").style.border = "none";
+      document.getElementById("message").style.backgroundColor = "#FFD7D6";
+      document.getElementById("message").style.padding = "25px";
+    }
+  </script>
+</html>
