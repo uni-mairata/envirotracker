@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Enviro-Tracker || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="/aboutus.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <!-- <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+
+    <!--START nagivation-->
+    <div class="topnav">
+      <!--Logo-->
+      <img
+        class="logo"
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+      />
+      <a href="index.html"
+        >Home <i style="font-size:17px" class="fas">&#xf015;</i>
+      </a>
+      <a href="aboutus.html"
+        >About Us <i class="fas fa-comment" style="font-size:17px"></i
+      ></a>
+      <a href="compare.html"
+        >Compare <i class="fas fa-comments" style="font-size:17px"></i
+      ></a>
+      <a href="contact.html"
+        >Contact <i style="font-size:17px" class="fas">&#xf095;</i></a
+      >
+      <div class="dropdown topnav">
+        <a href="#dropbtn"
+          >Learn the Impacts
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="water.html"><center>Water Use</center></a>
+          <a href="electricity.html"><center>Electricity</center></a>
+          <a href="food.html"><center>Food</center></a>
+        </div>
+      </div>
+    </div>
+    <!--END navigation-->
+
+    <div class="imgOverAbout">
+      <img
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Fblue%20sky.jpg?v=1581828974270"
+        style="height: 25%; width:100%;"
+      />
+      <div class="center" style="height: 50%;">
+        <h1 class="top" style="font-size: 20px">
+          About the Website
+        </h1>
+        <p class="top2" style="font-size: 25px">
+          The EnviroTracker is a web-app that helps calculate one's
+          environmental impact.
+          <br />Motivating people to change their daily routine, we work to
+          create a world where people and nature can thrive together.
+        </p>
+        <br /><br />
+
+        <h1 class="top3" style="font-size: 20px">
+          About the Creators
+        </h1>
+        <p class="top4" style="font-size: 30px">
+          Thank you to the hard work put in by:
+        </p>
+
+        <div class="NameList">
+          <h1 class="top5" style="font-size: 35px">
+            Alice Ao<br />
+            Christine Ao<br />
+            Maika Hirata<br />
+            Shayna Vinoth<br />
+            Katie Wang<br />
+          </h1>
+        </div>
+
+        <p class="top5" style="font-size: 20px">
+          This website was built by hand, using the platform Glitch. 24 hours of
+          continuous coding created everything seen here. Our teamwork and
+          perseverance let us pull through the multiple problems we encountered,
+          producing a product we are proud to show!
+        </p>
+
+        <img
+          src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2FScreen%20Shot%202020-02-16%20at%202.43.06%20AM.png?v=1581839002662"
+          height="200px"
+          width="200px"
+        />
+        <br /><br /><br /><br />
+      </div>
+    </div>
+
+    <br />
+
+    <br /><br />
+    <footer style="background-color:#071C47;">
+      <br />
+      <font color="white">
+        <center>
+          Share this on social media! Help everyone take steps towards being
+          environmentally friendly!
+        </center></font
+      >
+      <br />
+      <center>
+        <a href="https://www.facebook.com">
+          <img
+            border="0"
+            src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2FScreen%20Shot%202020-02-15%20at%2011.10.31%20PM.png?v=1581826247240"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://twitter.com/home">
+          <img
+            border="0"
+            src="https://www.transparentpng.com/thumb/twitter/twitter-bird-logo-pictures-0.png"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://www.instagram.com/">
+          <img
+            border="0"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/new-instagram-logo-png-transparent-light.png"
+            width="90"
+            height="90"
+        /></a>
+        <br />
+        <br />
+      </center>
+    </footer>
+  </body>
+</html>

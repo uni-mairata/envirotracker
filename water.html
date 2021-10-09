@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Impact of Water || Your Environmental Impact Tracker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="/index-style.css" />
+    <link rel="stylesheet" href="/water.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's javascript files -->
+    <script src="/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51afdf5c50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <!-- <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+
+    <!--START Loading Screen Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $("body").append(
+        '<div style="" id="loadingDiv"><div class="loader"></div></div>'
+      );
+      $(window).on("load", function() {
+        setTimeout(removeLoader, 500); //wait for page load
+      });
+      function removeLoader() {
+        $("html,body").scrollTop(0);
+        $("#loadingDiv").fadeOut(500, function() {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+      }
+    </script>
+    <!--END Loading Screen Javascript-->
+
+    <!--START nagivation-->
+    <div class="topnav">
+      <!--Logo-->
+      <img
+        class="logo"
+        src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2Flogo.png?v=1581798343681"
+      />
+      <a href="index.html"
+        >Home <i style="font-size:17px" class="fas">&#xf015;</i>
+      </a>
+      <a href="aboutus.html"
+        >About Us <i class="fas fa-comment" style="font-size:17px"></i
+      ></a>
+      <a href="compare.html"
+        >Compare <i class="fas fa-comments" style="font-size:17px"></i
+      ></a>
+      <a href="contact.html"
+        >Contact <i style="font-size:17px" class="fas">&#xf095;</i></a
+      >
+      <div class="dropdown topnav">
+        <a href="#dropbtn"
+          >Learn the Impacts
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="water.html"><center>Water Use</center></a>
+          <a href="electricity.html"><center>Electricity</center></a>
+          <a href="food.html"><center>Food</center></a>
+        </div>
+      </div>
+    </div>
+    <!--END navigation-->
+
+    <h1>
+      <center>
+        The Impact of Water
+      </center>
+    </h1>
+    <p>
+      <center>
+        Our use of water impacts the Earth, and the Earth's supply of available
+        fresh water impacts us.
+      </center>
+    </p>
+    <p>
+      Only 1.2% of the 3% of the Earth's freshwater source is available to us.
+      Having very easy access to drinking water like in the United States is a
+      reality that most people don't experience, especially in areas where water
+      is scarce from the starts. <br /><br />
+      However, most people dont' realize this in the U.S., and a majority of the
+      population tends to waste this preciuos freshwater without realizing the
+      impacts. And because of this careless use, even citizens in the United
+      States are experiencing water shortages. Several areas of the United
+      States are facing water shortages that can be detrimental and spread to
+      other regions which is seen in the image below. This makes conserving
+      water increasingly important.
+    </p>
+    <center>
+      <img
+        src="https://cdn.vox-cdn.com/thumbor/MPyENipUkvJAVY6Y8tEZYyQZfa4=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8483517/water_affordability_risk_us_map_vox.jpg"
+        height="400px"
+      />
+    </center>
+
+    <p>
+      There are a few ways to help conserve water in our everyday lives, such
+      as:
+    </p>
+    <div class="listing">
+      <ul>
+        <li>Showering for a shorter amount of time</li>
+        <br />
+        <li>Making sure the faucet is off when brushing your teeth</li>
+        <br />
+        <li>Don't use excess water when washing dishes</li>
+        <br />
+        <li>
+          Eat fewer foods that use lots of water to produce, like tea, beef,
+          chocolate (cocoa tree), dairy products, rice, etc.
+        </li>
+        <br />
+      </ul>
+    </div>
+    <br />
+    <footer style="background-color:#071C47;">
+      <br />
+      <font color="white">
+        <center>
+          Share this on social media! Help everyone take steps towards being
+          environmentally friendly!
+        </center></font
+      >
+      <br />
+      <center>
+        <a href="https://www.facebook.com">
+          <img
+            border="0"
+            src="https://cdn.glitch.com/13661525-cfa1-4c0f-9119-ad9acb3af5a7%2FScreen%20Shot%202020-02-15%20at%2011.10.31%20PM.png?v=1581826247240"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://twitter.com/home">
+          <img
+            border="0"
+            src="https://www.transparentpng.com/thumb/twitter/twitter-bird-logo-pictures-0.png"
+            width="90"
+            height="90"
+            hspace="20"
+        /></a>
+        <a href="https://www.instagram.com/">
+          <img
+            border="0"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/new-instagram-logo-png-transparent-light.png"
+            width="90"
+            height="90"
+        /></a>
+        <br />
+        <br />
+      </center>
+    </footer>
+  </body>
+</html>
